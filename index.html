@@ -214,11 +214,19 @@
     </div>
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6 page-entrance stagger-1">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <!-- Logo Atualizado -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6 page-entrance stagger-1 relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 opacity-25">
+            <img src="img/topo.jpg" alt="Background" class="w-full h-full object-contain object-center" onerror="this.onerror=null; this.src='https://placehold.co/1920x80/f97316/FFFFFF?text=BACKGROUND';" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 flex justify-between items-center relative z-10">
+            <!-- Logo Text -->
             <a href="#home" class="group cursor-pointer">
-                <img src="img/topo.jpg" alt="Logo" class="h-16 w-auto transform group-hover:scale-110 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/250x64/f97316/FFFFFF?text=SAULO+RIBEIRO';" />
+                <div class="text-2xl font-black text-white font-heading">
+                    <span class="text-orange-500">SAULO</span> <span class="text-white">RIBEIRO</span>
+                </div>
             </a>
 
             <!-- Desktop Menu -->
@@ -338,12 +346,12 @@
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
                 <h3 class="text-orange-500 font-bold tracking-widest text-sm uppercase mb-2 font-heading">Serviços</h3>
-                <h2 class="text-4xl md:text-5xl font-black text-white uppercase-italic font-heading">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase-italic font-heading">
                     Como Posso Te <span class="text-orange-500">Ajudar</span>
                 </h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Service Card 1 -->
                 <div class="tilt-card bg-neutral-900/50 border border-white/5 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(249,115,22,0.2)]">
                     <div class="w-20 h-20 rounded-xl overflow-hidden mb-4 bg-white/5 flex items-center justify-center">
@@ -362,7 +370,7 @@
                         <img src="img/Emagreciemnto.jpg" alt="Protocolo Emagrecimento" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/80x80/f97316/FFFFFF?text=PE';" />
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3 uppercase-italic font-heading">Protocolo de Emagrecimento</h3>
-                    <p class="text-gray-400 mb-4 leading-relaxed text-sm">"Não perca peso, perca gordura. O Protocolo de Emagrecimento transforma seu metabolismo em uma máquina de queimar calorias."</p>
+                    <p class="text-gray-400 mb-4 leading-relaxed text-sm">"Chega de treinar horas e não ver resultado. No meu Protocolo de Emagrecimento, você perde de 3 a 6 kg em apenas 1 mês com treinos curtos de no maximo 30 minutos, intensos e totalmente direcionados para queima de gordura"</p>
                     <a href="https://wa.me/5531996183182?text=Olá! Tenho interesse no Protocolo de Emagrecimento." target="_blank" class="inline-flex items-center text-orange-500 font-bold text-xs uppercase tracking-wide hover:text-white transition-colors">
                         Saiba Mais <i data-lucide="arrow-right" class="w-3 h-3 ml-2"></i>
                     </a>
@@ -398,7 +406,8 @@
                         <img src="img/PPS.png" alt="Protocolo PPS" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/80x80/f97316/FFFFFF?text=PPS';" />
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3 uppercase-italic font-heading">Protocolo PPS</h3>
-                    <p class="text-gray-400 mb-4 leading-relaxed text-sm">Sua transformação vai além da balança. Resultados visíveis na pele com o poder do treino PPS.</p>
+                    <p class="text-gray-400 mb-4 leading-relaxed text-sm">O PPS é um protocolo que aumenta o fluxo sanguíneo na região trabalhada, levando mais oxigênio, nutrientes e aumentando o metabolismo local. Isso acelera a recuperação dos tecidos, melhora a qualidade muscular e ajuda a reduzir o acúmulo de líquidos e toxinas — por isso é conhecido como o “exterminador de celulite”.
+</p>
                     <a href="https://wa.me/5531996183182?text=Olá! Quero saber mais sobre o Protocolo PPS." target="_blank" class="inline-flex items-center text-orange-500 font-bold text-xs uppercase tracking-wide hover:text-white transition-colors">
                         Saiba Mais <i data-lucide="arrow-right" class="w-3 h-3 ml-2"></i>
                     </a>
@@ -410,7 +419,7 @@
     <!-- About Section -->
     <section id="about" class="py-24 bg-black relative overflow-hidden">
         <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                 
                 <!-- Image Side -->
                 <div class="w-full lg:w-1/2 relative">
@@ -433,7 +442,7 @@
                 <!-- Text Side -->
                 <div class="w-full lg:w-1/2">
                     <h3 class="text-orange-500 font-bold tracking-widest text-sm uppercase mb-2 font-heading">Sobre Mim</h3>
-                    <h2 class="text-4xl md:text-5xl font-black text-white uppercase-italic mb-6 leading-tight font-heading">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase-italic mb-6 leading-tight font-heading">
                         Mais Que Um <span class="text-orange-500">Personal</span>
                     </h2>
                     
@@ -481,7 +490,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h3 class="text-orange-500 font-bold tracking-widest text-sm uppercase mb-2 font-heading">Resultados Reais</h3>
-                <h2 class="text-4xl md:text-5xl font-black text-white uppercase-italic font-heading">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase-italic font-heading">
                     Transformações <span class="text-orange-500">Incríveis</span>
                 </h2>
             </div>
@@ -489,18 +498,18 @@
             <!-- Carousel Container -->
             <div class="relative">
                 <!-- Navigation Buttons -->
-                <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-all">
-                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                <button id="prevBtn" class="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 bg-orange-600 hover:bg-orange-700 text-white p-2 md:p-3 rounded-full shadow-lg transition-all">
+                    <i data-lucide="chevron-left" class="w-4 h-4 md:w-5 md:h-5"></i>
                 </button>
-                <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-all">
-                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                <button id="nextBtn" class="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 bg-orange-600 hover:bg-orange-700 text-white p-2 md:p-3 rounded-full shadow-lg transition-all">
+                    <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
                 </button>
 
                 <!-- Carousel Track -->
-                <div class="overflow-hidden mx-16">
+                <div class="overflow-hidden mx-8 md:mx-16">
                     <div id="carouselTrack" class="flex transition-transform duration-500 ease-in-out">
                         <!-- Case 1 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 md:px-4">
                             <div class="tilt-result bg-neutral-900 rounded-2xl overflow-hidden group hover:shadow-[0_0_40px_rgba(249,115,22,0.3)] transition-all duration-300 border border-white/5">
                                 <!-- Image Split -->
                                 <div class="flex h-80 relative">
@@ -528,7 +537,7 @@
                         </div>
 
                         <!-- Case 2 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 md:px-4">
                             <div class="tilt-result bg-neutral-900 rounded-2xl overflow-hidden group hover:shadow-[0_0_40px_rgba(249,115,22,0.3)] transition-all duration-300 border border-white/5">
                                 <!-- Image Split -->
                                 <div class="flex h-80 relative">
@@ -556,7 +565,7 @@
                         </div>
                         
                         <!-- Case 3 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 md:px-4">
                             <div class="tilt-result bg-neutral-900 rounded-2xl overflow-hidden group hover:shadow-[0_0_40px_rgba(249,115,22,0.3)] transition-all duration-300 border border-white/5">
                                 <!-- Image Split -->
                                 <div class="flex h-80 relative">
@@ -584,7 +593,7 @@
                         </div>
 
                         <!-- Case 4 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 md:px-4">
                             <div class="tilt-result bg-neutral-900 rounded-2xl overflow-hidden group hover:shadow-[0_0_40px_rgba(249,115,22,0.3)] transition-all duration-300 border border-white/5">
                                 <div class="flex h-80 relative">
                                     <div class="w-1/2 relative border-r border-white/10 overflow-hidden">
@@ -610,7 +619,7 @@
                         </div>
 
                         <!-- Case 5 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 md:px-4">
                             <div class="tilt-result bg-neutral-900 rounded-2xl overflow-hidden group hover:shadow-[0_0_40px_rgba(249,115,22,0.3)] transition-all duration-300 border border-white/5">
                                 <div class="flex h-80 relative">
                                     <div class="w-1/2 relative border-r border-white/10 overflow-hidden">
@@ -636,7 +645,7 @@
                         </div>
 
                         <!-- Case 6 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                        <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2 md:px-4">
                             <div class="tilt-result bg-neutral-900 rounded-2xl overflow-hidden group hover:shadow-[0_0_40px_rgba(249,115,22,0.3)] transition-all duration-300 border border-white/5">
                                 <div class="flex h-80 relative">
                                     <div class="w-1/2 relative border-r border-white/10 overflow-hidden">
@@ -666,81 +675,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-24 bg-black">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black text-white uppercase-italic font-heading">
-                    O Que Dizem Sobre <span class="text-orange-500">Mim</span>
-                </h2>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="tilt-testimonial bg-neutral-900/40 p-8 rounded-2xl border border-white/5 relative hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] transition-shadow">
-                    <div class="flex text-orange-500 mb-4 gap-1">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    </div>
-                    
-                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">"Profissional excepcional! Consegui resultados que nunca imaginei possíveis. O método é único e personalizado."</p>
-                    
-                    <div class="flex items-center gap-4">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop" alt="Mariana Costa" class="w-12 h-12 rounded-full object-cover border-2 border-orange-500" onerror="this.onerror=null; this.src='https://placehold.co/48x48/f97316/FFFFFF?text=M';" />
-                        <div>
-                            <h4 class="text-white font-bold uppercase text-sm font-heading">Mariana Costa</h4>
-                            <p class="text-gray-500 text-xs">Empresária</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="tilt-testimonial bg-neutral-900/40 p-8 rounded-2xl border border-white/5 relative hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] transition-shadow">
-                    <div class="flex text-orange-500 mb-4 gap-1">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    </div>
-                    
-                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">"Mesmo com minha rotina corrida, consegui transformar meu corpo. 100% recomendo!"</p>
-                    
-                    <div class="flex items-center gap-4">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" alt="Fernando Santos" class="w-12 h-12 rounded-full object-cover border-2 border-orange-500" onerror="this.onerror=null; this.src='https://placehold.co/48x48/f97316/FFFFFF?text=F';" />
-                        <div>
-                            <h4 class="text-white font-bold uppercase text-sm font-heading">Fernando Santos</h4>
-                            <p class="text-gray-500 text-xs">Advogado</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="tilt-testimonial bg-neutral-900/40 p-8 rounded-2xl border border-white/5 relative hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] transition-shadow">
-                    <div class="flex text-orange-500 mb-4 gap-1">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    </div>
-                    
-                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">"Conhecimento técnico impressionante aliado a um atendimento humano incrível. Mudei meus hábitos para sempre."</p>
-                    
-                    <div class="flex items-center gap-4">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop" alt="Carla Oliveira" class="w-12 h-12 rounded-full object-cover border-2 border-orange-500" onerror="this.onerror=null; this.src='https://placehold.co/48x48/f97316/FFFFFF?text=C';" />
-                        <div>
-                            <h4 class="text-white font-bold uppercase text-sm font-heading">Carla Oliveira</h4>
-                            <p class="text-gray-500 text-xs">Médica</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer id="contact" class="bg-neutral-950 border-t border-white/10 pt-20 pb-10">
@@ -845,14 +780,17 @@
         const navbar = document.getElementById('navbar');
 
         function handleScroll() {
+            const navBg = navbar.querySelector('.absolute.inset-0');
             if (window.scrollY > 50) {
                 // Adiciona classes para o fundo escuro/blur
                 navbar.classList.remove('bg-transparent', 'py-6');
                 navbar.classList.add('bg-black/90', 'backdrop-blur-md', 'py-4', 'border-b', 'border-white/10');
+                if (navBg) navBg.style.opacity = '0.1';
             } else {
                 // Remove classes para o fundo transparente
                 navbar.classList.remove('bg-black/90', 'backdrop-blur-md', 'py-4', 'border-b', 'border-white/10');
                 navbar.classList.add('bg-transparent', 'py-6');
+                if (navBg) navBg.style.opacity = '0.25';
             }
         }
 
@@ -912,28 +850,45 @@
             });
         });
 
-        // 7. Carousel Functionality
+        // 7. Responsive Carousel Functionality
         const carouselTrack = document.getElementById('carouselTrack');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         let currentIndex = 0;
         const totalSlides = 6;
-        const slidesPerView = 3;
-        const totalPages = Math.ceil(totalSlides / slidesPerView);
-
+        
+        function getSlidesPerView() {
+            if (window.innerWidth >= 1024) return 3; // lg
+            if (window.innerWidth >= 640) return 2;  // sm
+            return 1; // mobile
+        }
+        
         function updateCarousel() {
+            const slidesPerView = getSlidesPerView();
             const slideWidth = 100 / slidesPerView;
-            const translateX = -currentIndex * slideWidth * slidesPerView;
+            const translateX = -currentIndex * slideWidth;
             carouselTrack.style.transform = `translateX(${translateX}%)`;
+        }
+        
+        function getTotalPages() {
+            return Math.ceil(totalSlides / getSlidesPerView());
         }
 
         prevBtn.addEventListener('click', () => {
+            const totalPages = getTotalPages();
             currentIndex = currentIndex > 0 ? currentIndex - 1 : totalPages - 1;
             updateCarousel();
         });
 
         nextBtn.addEventListener('click', () => {
+            const totalPages = getTotalPages();
             currentIndex = currentIndex < totalPages - 1 ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+        
+        // Update carousel on window resize
+        window.addEventListener('resize', () => {
+            currentIndex = 0; // Reset to first slide on resize
             updateCarousel();
         });
 
@@ -1087,14 +1042,7 @@
                 scale: 1.01
             });
 
-            // Testimonial Cards
-            VanillaTilt.init(document.querySelectorAll(".tilt-testimonial"), {
-                max: 12,
-                speed: 350,
-                glare: true,
-                "max-glare": 0.1,
-                scale: 1.015
-            });
+
 
             // About Image
             VanillaTilt.init(document.querySelectorAll(".tilt-about"), {
