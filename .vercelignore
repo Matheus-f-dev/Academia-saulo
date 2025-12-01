@@ -1,0 +1,3 @@
+# Não ignorar imagens
+!img/
+!img/*
